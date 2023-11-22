@@ -1,0 +1,5 @@
+inherits = "onedark"
+
+"ui.statusline.normal" = { fg = "light-black", bg = "green" }
+"ui.statusline.insert" = { fg = "light-black", bg = "blue" }
+"ui.virtual.indent-guide" = { fg = "light-gray" }
