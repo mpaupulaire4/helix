@@ -1,12 +1,26 @@
-theme = "onedark"
+theme = "onedark+"
 
 [editor]
 mouse = false
 middle-click-paste = false
 cursorline = true
-gutters = ["line-numbers", "diff"]
+auto-format = false
 completion-replace = true
 color-modes = true
+preview-completion-insert = true
+undercurl = true
+insert-final-newline = true
+
+[editor.statusline]
+left = ["mode", "read-only-indicator", "file-name", "file-modification-indicator", "version-control"]
+center = []
+right = ["selections" ,"spinner", "file-type"]
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[editor.lsp]
+display-inlay-hints = true
 
 [editor.cursor-shape]
 insert = "bar"
@@ -15,3 +29,70 @@ select = "underline"
 
 [editor.file-picker]
 hidden = false
+
+[editor.indent-guides]
+render = true
+character = "┆"
+
+[editor.gutters]
+layout = ["line-numbers", "spacer", "diff", "spacer"]
+line-numbers.min-width = 2
+
+[editor.soft-wrap]
+enable = true
+max-wrap = 40
+
+
+[keys.normal]
+esc = "keep_primary_selection"
+C-s = ":w"
+C-q = "wclose"
+C-a = "select_all"
+C-down = "copy_selection_on_next_line"
+C-up =   "copy_selection_on_prev_line"
+l = "extend_line_below"
+d = "delete_selection_noyank"
+x = "delete_selection"
+H = "hover"
+c = "change_selection_noyank"
+k = "select_regex"
+S = "split_selection"
+s = "split_selection_on_newline"
+C-right = "move_next_word_end"
+C-left = "move_prev_word_start"
+# BUFFERS
+tab = "goto_next_buffer"
+S-tab = "goto_previous_buffer"
+# DISABLE DEFUALTS
+C-w = "no_op"
+C = "no_op"
+
+[keys.normal.space]
+F = "file_picker_in_current_buffer_directory"
+b = "no_op"
+s = "no_op"
+d = "no_op"
+j = "no_op"
+S = "no_op"
+D = "no_op"
+
+[keys.normal.space.f]
+f = "file_picker"
+b = "buffer_picker"
+s = "symbol_picker"
+d = "workspace_diagnostics_picker"
+j = "jumplist_picker"
+
+[keys.normal.space.h]
+r = ":reset-diff-change"
+
+[keys.insert]
+C-s = [":w", "normal_mode"]
+C-right = "move_next_word_end"
+C-left = "move_prev_word_start"
+C-space = "completion"
+
+[keys.select]
+C-e = "normal_mode"
+
+
