@@ -83,8 +83,12 @@ c = "toggle_comments"
 f = "file_picker"
 b = "buffer_picker"
 s = "symbol_picker"
-d = "workspace_diagnostics_picker"
 j = "jumplist_picker"
+
+[keys.normal.space.d]
+n = "goto_next_diag"
+p = "goto_prev_diag"
+a = "workspace_diagnostics_picker"
 
 [keys.normal.space.h]
 r = ":reset-diff-change"

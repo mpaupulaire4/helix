@@ -1,7 +1,7 @@
 [[language]]
 name = "typescript"
 language-servers = [
-  {name = "eslint", only-features = ["diagnostics"]},  
+  { name = "efm", only-features = [ "diagnostics", "format" ] }, 
   "typescript-language-server",
 ]
 
@@ -15,7 +15,7 @@ language-servers = [
 [[language]]
 name = "javascript"
 language-servers = [
-  {name = "eslint", only-features = ["diagnostics"]},  
+  { name = "efm", only-features = [ "diagnostics", "format" ] }, 
   "typescript-language-server",
 ]
 
