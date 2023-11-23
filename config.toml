@@ -21,6 +21,7 @@ mode.select = "SELECT"
 
 [editor.lsp]
 display-inlay-hints = true
+display-messages = true
 
 [editor.cursor-shape]
 insert = "bar"
@@ -66,15 +67,17 @@ S-tab = "goto_previous_buffer"
 # DISABLE DEFUALTS
 C-w = "no_op"
 C = "no_op"
+C-c = "no_op"
 
 [keys.normal.space]
 F = "file_picker_in_current_buffer_directory"
+s = ":format"
 b = "no_op"
-s = "no_op"
 d = "no_op"
 j = "no_op"
 S = "no_op"
 D = "no_op"
+c = "toggle_comments"
 
 [keys.normal.space.f]
 f = "file_picker"
@@ -85,6 +88,8 @@ j = "jumplist_picker"
 
 [keys.normal.space.h]
 r = ":reset-diff-change"
+n = "goto_next_change"
+p = "goto_prev_change"
 
 [keys.insert]
 C-s = [":w", "normal_mode"]
@@ -93,6 +98,6 @@ C-left = "move_prev_word_start"
 C-space = "completion"
 
 [keys.select]
-C-e = "normal_mode"
-
-
+c = "change_selection_noyank"
+d = "delete_selection_noyank"
+x = "delete_selection"
