@@ -22,7 +22,7 @@ language-servers = [
 [[language]]
 name = "jsx"
 language-servers = [
-  {name = "eslint", only-features = ["diagnostics"]},  
+  { name = "efm", only-features = [ "diagnostics", "format" ] }, 
   "typescript-language-server",
 ]
 
@@ -34,18 +34,6 @@ args = ["typescript-language-server", "--stdio"]
 [language-server.svelteserver]
 command = "npx"
 args = ["svelte-language-server", "--stdio"]
-
-[language-server.vscode-css-language-server]
-command = "npx"
-args = ["--package=vscode-langservers-extracted", "--", "vscode-css-language-server", "--stdio"]
-
-[language-server.vscode-html-language-server]
-command = "npx"
-args = ["--package=vscode-langservers-extracted", "--", "vscode-html-language-server", "--stdio"]
-
-[language-server.vscode-json-language-server]
-command = "npx"
-args = ["--package=vscode-langservers-extracted", "--", "vscode-json-language-server", "--stdio"]
 
 [language-server.prisma-language-server]
 command = "npx"
@@ -59,5 +47,27 @@ args = ["tailwindcss-language-server", "--stdio"]
 command = "npx"
 args = ["unocss-language-server", "--stdio"]
 
+[language-server.yaml-language-server]
+command = "npx"
+args = ["yaml-language-server", "--stdio"]
+
+[language-server.yaml-language-server.config.yaml]
+schemaStore = {enable = true}
+
 [language-server.efm]
 command = "efm-langserver"
+
+[language-server.vscode-css-language-server]
+command = "npx"
+args = ["--package=vscode-langservers-extracted", "--", "vscode-css-language-server", "--stdio"]
+
+[language-server.vscode-html-language-server]
+command = "npx"
+args = ["--package=vscode-langservers-extracted", "--", "vscode-html-language-server", "--stdio"]
+
+[language-server.vscode-json-language-server]
+command = "npx"
+args = ["--package=vscode-langservers-extracted", "--", "vscode-json-language-server", "--stdio"]
+
+[language-server.vscode-json-language-server.config.json]
+validate = {enable = true}
