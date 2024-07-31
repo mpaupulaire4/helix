@@ -11,6 +11,9 @@ preview-completion-insert = true
 undercurl = true
 insert-final-newline = true
 
+[editor.smart-tab]
+enable = false
+
 [editor.statusline]
 left = ["mode", "read-only-indicator", "file-name", "file-modification-indicator", "version-control"]
 center = []
@@ -49,6 +52,7 @@ esc = "keep_primary_selection"
 C-s = ":w"
 C-x = ":buffer-close"
 C-q = "wclose"
+C-r = ":reload"
 C-a = "select_all"
 C-down = "copy_selection_on_next_line"
 C-up =   "copy_selection_on_prev_line"
