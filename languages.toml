@@ -26,48 +26,11 @@ language-servers = [
   "typescript-language-server",
 ]
 
-
-[language-server.typescript-language-server]
-command = "npx"
-args = ["typescript-language-server", "--stdio"]
-
-[language-server.svelteserver]
-command = "npx"
-args = ["svelte-language-server", "--stdio"]
-
-[language-server.prisma-language-server]
-command = "npx"
-args = ["prisma-language-server", "--stdio"]
-
-[language-server.tailwindcss-language-server]
-command = "npx"
-args = ["tailwindcss-language-server", "--stdio"]
-
-[language-server.unocss-language-server]
-command = "npx"
-args = ["unocss-language-server", "--stdio"]
-
-[language-server.yaml-language-server]
-command = "npx"
-args = ["yaml-language-server", "--stdio"]
-
 [language-server.yaml-language-server.config.yaml]
 schemaStore = {enable = true}
 
 [language-server.efm]
 command = "efm-langserver"
-
-[language-server.vscode-css-language-server]
-command = "npx"
-args = ["--package=vscode-langservers-extracted", "--", "vscode-css-language-server", "--stdio"]
-
-[language-server.vscode-html-language-server]
-command = "npx"
-args = ["--package=vscode-langservers-extracted", "--", "vscode-html-language-server", "--stdio"]
-
-[language-server.vscode-json-language-server]
-command = "npx"
-args = ["--package=vscode-langservers-extracted", "--", "vscode-json-language-server", "--stdio"]
 
 [language-server.vscode-json-language-server.config.json]
 validate = {enable = true}

@@ -10,6 +10,8 @@ color-modes = true
 preview-completion-insert = true
 undercurl = true
 insert-final-newline = true
+rulers = [80, 120]
+popup-border = "popup"
 
 [editor.smart-tab]
 enable = false
@@ -25,6 +27,7 @@ mode.select = "SELECT"
 [editor.lsp]
 display-inlay-hints = false
 display-messages = true
+auto-signature-help = false
 
 [editor.cursor-shape]
 insert = "bar"
