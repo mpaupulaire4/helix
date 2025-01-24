@@ -11,3 +11,8 @@ npm install -g \
   vscode-langservers-extracted \
   svelte-language-server
   # prisma-language-server \
+
+go install golang.org/x/tools/gopls@latest 
+go install golang.org/x/tools/cmd/goimports@latest                    # Formatter
+go install github.com/nametake/golangci-lint-langserver@latest        # Linter
+go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest # Linter cli
