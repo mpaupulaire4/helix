@@ -12,9 +12,13 @@ undercurl = true
 insert-final-newline = true
 rulers = [80, 120]
 popup-border = "popup"
+end-of-line-diagnostics = "hint"
 
 [editor.smart-tab]
 enable = false
+
+[editor.inline-diagnostics]
+cursor-line = "warning"
 
 [editor.statusline]
 left = ["mode", "read-only-indicator", "file-name", "file-modification-indicator", "version-control"]
