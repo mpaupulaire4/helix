@@ -126,4 +126,6 @@ C-space = "completion"
 [keys.select]
 c = "change_selection_noyank"
 d = "delete_selection_noyank"
+y = "yank_to_clipboard"
+R = "replace_selections_with_clipboard"
 # x = "delete_selection"
